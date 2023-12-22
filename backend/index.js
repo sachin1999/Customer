@@ -12,10 +12,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 const PORT = process.env.PORT || 5000;
-mongoose.connect(process.env.DB_URL).then(()=> {
-    app.listen(PORT, () => console.log(`Server Port: ${PORT} connected successfully`));
 
-}).catch((error)=> console.log(`${error} did not connect`));
 app.post('/get-token', async (req, res) => {
     try {
       const apiUrl = 'https://qa2.sunbasedata.com/sunbase/portal/api/assignment_auth.jsp';
@@ -116,3 +113,4 @@ app.get('/getCustomerList', async (req, res) => {
       res.status(500).json({ error: 'Failed to update customer' });
     }
   });
+  app.listen(PORT, () => console.log(`Server Port: ${PORT} connected successfully`));
