@@ -18,7 +18,7 @@ const CreateCustomer = () => {
     console.log(token)
     console.log(firstName)
   const navigate = useNavigate();
-  const apiUrl = 'http://localhost:4000/create-customer';
+  const apiUrl = 'https://customer-back.onrender.com/create-customer';
 
   const createCustomer = async () => {
     try {

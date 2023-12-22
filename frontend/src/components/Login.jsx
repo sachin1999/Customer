@@ -6,8 +6,8 @@ const Login = () => {
     const [password,setPassword] = useState('');
     var token='';
     const [error, setError] = useState(null);
-    const apiUrl = 'http://localhost:4000/get-token';
-    // console.log(token);
+    const apiUrl = 'https://customer-back.onrender.com/get-token';
+ 
     const submitHandler= async (e)=>{
         e.preventDefault();
         try {

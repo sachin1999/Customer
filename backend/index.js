@@ -37,8 +37,6 @@ app.post('/get-token', async (req, res) => {
     }
   });
   app.post('/create-customer', async (req, res) => {
-    console.log(req.body);
-    console.log(req.headers.authorization)
     try {
       const apiUrl = `https://qa2.sunbasedata.com/sunbase/portal/api/assignment.jsp?cmd=create`;
       const response = await axios.post(apiUrl, req.body, {

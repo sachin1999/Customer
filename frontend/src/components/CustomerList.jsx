@@ -22,7 +22,7 @@ const CustomerList = ( ) => {
   const fetchCustomerList = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:4000/getCustomerList',
+        'https://customer-back.onrender.com/getCustomerList',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ const CustomerList = ( ) => {
   const handleDelete = async (uuid) => {
     try {
       await axios.post(
-        'http://localhost:4000/deleteCustomer',
+        'https://customer-back.onrender.com/deleteCustomer',
         {
           cmd: 'delete',
           uuid: uuid,
@@ -77,7 +77,7 @@ const CustomerList = ( ) => {
   const handleUpdate = async () => {
     try {
       await axios.post(
-        'http://localhost:4000/updateCustomer',
+        'https://customer-back.onrender.com/updateCustomer',
         {
           cmd: 'update',
           uuid: updatedCustomerData.uuid,
